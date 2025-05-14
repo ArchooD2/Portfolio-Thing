@@ -1,0 +1,125 @@
+:root {
+  --bg: #0a0c10;
+  --fg: #cbd6e2;
+  --container-bg: #12161c;
+  --accent: #4d6fa3;
+  --accent-hover: #1a2333;
+  --link: #c2e0b3;
+  --link-hover: #f8c984;
+  --tag: #8899aa;
+  --border: #2c3e50;
+  --card-radius: 12px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, footer {
+  background: var(--container-bg);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 0.5em 0;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: var(--container-bg);
+  padding: 2.5rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: var(--card-radius);
+}
+
+.project {
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #1b1f27;
+}
+
+.project:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.project-title {
+  font-size: 1.3em;
+  margin-bottom: 0.3em;
+  color: #a2c2e0;
+  font-weight: 500;
+}
+
+.project-tags {
+  font-size: 0.85em;
+  color: var(--tag);
+  margin-bottom: 0.6em;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.video-embed {
+  margin-top: 1.5rem;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+button {
+  background-color: var(--accent);
+  color: var(--fg);
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+  color: #fff;
+}
+
+footer {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* On larger screens, switch to two or three columns */
+@media (min-width: 700px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
